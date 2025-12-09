@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Nexa House - Buy and rent properties with cryptocurrency",
   "scripts": {
-    "sass": "sass scss/styles.scss css/styles.css --watch",
+    "sass": "sass scss/styles.scss css/styles.css",
     "sass:build": "sass scss/styles.scss css/styles.css --style=compressed --no-source-map",
     "serve": "npx serve .",
     "dev": "npm-run-all --parallel sass serve",
