@@ -1,0 +1,31 @@
+{
+  "name": "nexa.house",
+  "version": "1.0.0",
+  "description": "Nexa House - Buy and rent properties with cryptocurrency",
+  "scripts": {
+    "sass": "sass scss/styles.scss css/styles.css --watch",
+    "sass:build": "sass scss/styles.scss css/styles.css --style=compressed --no-source-map",
+    "serve": "npx serve .",
+    "dev": "npm-run-all --parallel sass serve",
+    "build": "npm run sass:build",
+    "sitemap": "./scripts/generate-sitemap.sh",
+    "robots": "./scripts/generate-robots.sh",
+    "seo": "npm run sitemap && npm run robots"
+  },
+  "keywords": [
+    "nexa",
+    "cryptocurrency",
+    "real-estate",
+    "property",
+    "blockchain",
+    "housing",
+    "rental"
+  ],
+  "author": "Nexa",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.5",
+    "serve": "^14.2.1",
+    "npm-run-all": "^4.1.5"
+  }
+}

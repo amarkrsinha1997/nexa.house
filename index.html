@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Buy and rent properties worldwide with Nexa cryptocurrency. Instant payments, no banks, global access to real estate in US, Europe, Bhutan and beyond.">
+  <meta name="keywords" content="nexa, cryptocurrency, real estate, property, blockchain, housing, rental, buy house with crypto">
+  <meta name="author" content="Nexa">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nexa.house/">
+  <meta property="og:title" content="Nexa House - Buy & Rent Properties with Cryptocurrency">
+  <meta property="og:description" content="Buy and rent properties worldwide with Nexa cryptocurrency. Instant payments, no banks, global access.">
+  <meta property="og:image" content="/assets/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nexa.house/">
+  <meta property="twitter:title" content="Nexa House - Buy & Rent Properties with Cryptocurrency">
+  <meta property="twitter:description" content="Buy and rent properties worldwide with Nexa cryptocurrency. Instant payments, no banks, global access.">
+  <meta property="twitter:image" content="/assets/images/og-image.jpg">
+
+  <title>Nexa House - Buy & Rent Properties with Cryptocurrency</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#8B5CF6">
+</head>
+<body>
+  <!-- Starfield Canvas Background -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <span class="logo-icon"><i class="fas fa-home"></i></span>
+        <span data-i18n="footer.brand.name">Nexa House</span>
+      </a>
+
+      <nav>
+        <a href="#about" data-i18n="nav.about">About Us</a>
+        <a href="#properties" data-i18n="nav.properties">Properties</a>
+        <a href="#why-nexa" data-i18n="nav.whyNexa">Why Nexa</a>
+        <a href="#roadmap" data-i18n="nav.roadmap">What's Coming</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-dropdown">
+          <button class="lang-toggle"><i class="fas fa-globe"></i> EN</button>
+          <div class="lang-options">
+            <button class="lang-option" data-lang="en">English</button>
+            <button class="lang-option" data-lang="hi">हिंदी</button>
+          </div>
+        </div>
+        <a href="#properties" class="cta-btn" data-i18n="cta.exploreProperties">Explore Properties</a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <nav>
+      <a href="#about" data-i18n="nav.about">About Us</a>
+      <a href="#properties" data-i18n="nav.properties">Properties</a>
+      <a href="#why-nexa" data-i18n="nav.whyNexa">Why Nexa</a>
+      <a href="#roadmap" data-i18n="nav.roadmap">What's Coming</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="mobile-cta">
+      <a href="#properties" class="cta-btn" data-i18n="cta.exploreProperties">Explore Properties</a>
+    </div>
+  </div>
+  <div class="mobile-overlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero.badge">Revolutionary Real Estate</div>
+      <h1>
+        <span data-i18n="hero.title">Your Dream Home, Powered by</span>
+        <span class="gradient-text" data-i18n="hero.titleGradient">Nexa</span>
+      </h1>
+      <p data-i18n="hero.subtitle">
+        Buy and rent properties worldwide with cryptocurrency. Instant payments, no banks, no borders. Welcome to the future of real estate.
+      </p>
+      <div class="hero-actions">
+        <a href="#properties" class="btn-primary" data-i18n="hero.ctaPrimary">Explore Properties</a>
+        <a href="#about" class="btn-secondary" data-i18n="hero.ctaSecondary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-value">500+</div>
+        <div class="stat-label" data-i18n="hero.stats.0.label">Properties Listed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">45</div>
+        <div class="stat-label" data-i18n="hero.stats.1.label">Countries</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">$2.5M+</div>
+        <div class="stat-label" data-i18n="hero.stats.2.label">Transactions</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about animate-on-scroll">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 data-i18n="about.heading">About Nexa House</h2>
+          <p data-i18n="about.content.0">
+            Nexa House is the world's first cryptocurrency-powered real estate platform, making property ownership accessible to everyone, everywhere. We believe that buying or renting a home should be as simple as sending a message.
+          </p>
+          <p data-i18n="about.content.1">
+            Built on the Nexa blockchain, we eliminate intermediaries, reduce costs, and provide instant, secure transactions. Whether you're looking for a vacation rental in Bhutan, a city apartment in New York, or a countryside villa in Europe, Nexa House makes it possible.
+          </p>
+
+          <div class="about-features">
+            <div class="feature-item">
+              <span class="feature-icon"><i class="fas fa-bolt"></i></span>
+              <div class="feature-text">
+                <h4 data-i18n="about.features.0.title">Instant Transactions</h4>
+                <p data-i18n="about.features.0.description">Complete property transactions in minutes, not months</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon"><i class="fas fa-globe"></i></span>
+              <div class="feature-text">
+                <h4 data-i18n="about.features.1.title">Global Access</h4>
+                <p data-i18n="about.features.1.description">Buy or rent properties anywhere in the world</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon"><i class="fas fa-lock"></i></span>
+              <div class="feature-text">
+                <h4 data-i18n="about.features.2.title">Secure & Transparent</h4>
+                <p data-i18n="about.features.2.description">Blockchain-verified ownership and smart contracts</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon"><i class="fas fa-money-bill-wave"></i></span>
+              <div class="feature-text">
+                <h4 data-i18n="about.features.3.title">Low Fees</h4>
+                <p data-i18n="about.features.3.description">Save up to 90% on traditional real estate fees</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop" alt="Modern luxury home" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties Section -->
+  <section id="properties" class="properties animate-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="properties.heading">Featured Properties</h2>
+        <p data-i18n="properties.subtitle">Explore stunning homes available for purchase or rent with Nexa</p>
+      </div>
+
+      <div id="properties-grid" class="properties-grid">
+        <!-- Properties will be dynamically rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Nexa Section -->
+  <section id="why-nexa" class="why-nexa animate-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="whyNexa.heading">Why Choose Nexa for Real Estate?</h2>
+        <p data-i18n="whyNexa.subtitle">Experience the future of property ownership with blockchain technology</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 data-i18n="whyNexa.benefits.0.title">Economic Growth</h3>
+          <p data-i18n="whyNexa.benefits.0.description">
+            Invest in appreciating assets with cryptocurrency. Nexa's deflationary model means your property investment gains value over time, both in real estate and crypto appreciation.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-gem"></i></div>
+          <h3 data-i18n="whyNexa.benefits.1.title">Tax Savings</h3>
+          <p data-i18n="whyNexa.benefits.1.description">
+            Reduce capital gains taxes with crypto-to-property exchanges. Smart contracts automate deductions, and blockchain transparency simplifies tax reporting, saving you thousands.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-sync-alt"></i></div>
+          <h3 data-i18n="whyNexa.benefits.2.title">Easy Conversion</h3>
+          <p data-i18n="whyNexa.benefits.2.description">
+            Convert Nexa to property or property to Nexa instantly. No waiting for bank approvals, no currency exchange fees, no complicated paperwork. Just seamless transactions.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-globe-americas"></i></div>
+          <h3 data-i18n="whyNexa.benefits.3.title">Global Accessibility</h3>
+          <p data-i18n="whyNexa.benefits.3.description">
+            Access properties worldwide without borders. Whether you're in Tokyo or Toronto, buy or rent properties anywhere with the same simple Nexa transaction.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
+          <h3 data-i18n="whyNexa.benefits.4.title">Instant Settlements</h3>
+          <p data-i18n="whyNexa.benefits.4.description">
+            Complete transactions in minutes instead of months. Smart contracts execute automatically when conditions are met, eliminating delays and reducing costs by 90%.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 data-i18n="whyNexa.benefits.5.title">Secure Ownership</h3>
+          <p data-i18n="whyNexa.benefits.5.description">
+            Blockchain-verified property titles that can't be forged or disputed. Your ownership is permanently recorded on the Nexa blockchain, accessible anywhere, anytime.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="roadmap animate-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="roadmap.heading">What's Coming to Nexa House</h2>
+        <p data-i18n="roadmap.subtitle">Our vision for the future of decentralized real estate</p>
+      </div>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-card">
+          <div class="roadmap-number">01</div>
+          <h3 data-i18n="roadmap.items.0.title">NFT Property Titles</h3>
+          <p data-i18n="roadmap.items.0.description">
+            Convert property ownership into NFTs for easy transfer, fractional ownership, and enhanced liquidity. Trade property shares like stocks.
+          </p>
+        </div>
+
+        <div class="roadmap-card">
+          <div class="roadmap-number">02</div>
+          <h3 data-i18n="roadmap.items.1.title">Virtual Property Tours</h3>
+          <p data-i18n="roadmap.items.1.description">
+            Explore properties in immersive 3D and VR before you buy. Walk through homes from anywhere in the world using your phone or VR headset.
+          </p>
+        </div>
+
+        <div class="roadmap-card">
+          <div class="roadmap-number">03</div>
+          <h3 data-i18n="roadmap.items.2.title">Fractional Ownership</h3>
+          <p data-i18n="roadmap.items.2.description">
+            Own a piece of premium properties you couldn't afford alone. Pool resources with others to invest in high-value real estate.
+          </p>
+        </div>
+
+        <div class="roadmap-card">
+          <div class="roadmap-number">04</div>
+          <h3 data-i18n="roadmap.items.3.title">AI Property Matching</h3>
+          <p data-i18n="roadmap.items.3.description">
+            Machine learning algorithms that understand your preferences and budget, recommending perfect properties before they hit the market.
+          </p>
+        </div>
+
+        <div class="roadmap-card">
+          <div class="roadmap-number">05</div>
+          <h3 data-i18n="roadmap.items.4.title">Rental Income Automation</h3>
+          <p data-i18n="roadmap.items.4.description">
+            Smart contracts automatically distribute rental income to property owners in Nexa. No property managers, no delays, no fees.
+          </p>
+        </div>
+
+        <div class="roadmap-card">
+          <div class="roadmap-number">06</div>
+          <h3 data-i18n="roadmap.items.5.title">Global Expansion</h3>
+          <p data-i18n="roadmap.items.5.description">
+            Expanding to 100+ countries by 2026 with localized support, regional partnerships, and integration with local property laws.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq animate-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="faq.heading">Frequently Asked Questions</h2>
+        <p data-i18n="faq.subtitle">Everything you need to know about buying and renting with Nexa</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.items.0.question">How do I buy a property with Nexa?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.items.0.answer">
+              Buying a property with Nexa is simple: Browse our listings, select your property, connect your Nexa wallet, and initiate the smart contract. Once you transfer the Nexa amount, the smart contract automatically processes the transaction and transfers ownership to you. The entire process takes 10-30 minutes.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.items.1.question">Is my property ownership legally recognized?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.items.1.answer">
+              Yes, absolutely. Nexa House works with local legal partners in each country to ensure all property transactions comply with local laws. Your blockchain-verified ownership is legally binding and registered with local authorities. You receive both a blockchain certificate and traditional legal documentation.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.items.2.question">What happens if I don't have enough Nexa?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.items.2.answer">
+              You can purchase Nexa cryptocurrency on major exchanges like Binance, Coinbase, or directly through our integrated exchange partners. We also offer a fiat-to-Nexa conversion service where you can buy Nexa with your credit card or bank transfer within the platform.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.items.3.question">Can I rent out my Nexa House property?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.items.3.answer">
+              Yes! Our platform includes a built-in rental management system. You can list your property for short-term or long-term rentals, set your rates in Nexa, and receive automated payments through smart contracts. Rental income is distributed to your wallet automatically.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.items.4.question">What are the fees compared to traditional real estate?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.items.4.answer">
+              Traditional real estate transactions charge 5-6% in agent fees plus legal costs. Nexa House charges only 1.5% total (0.75% buyer, 0.75% seller). On a $500,000 property, that's $7,500 instead of $30,000+ - saving you over $22,500!
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.items.5.question">How do property inspections work?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.items.5.answer">
+              Each property listing includes professional photos, 3D virtual tours, and detailed inspection reports. For high-value purchases, we can arrange in-person inspections with local partners or virtual live tours with the seller. You can also hire independent inspectors in the property's location.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.items.6.question">What countries are currently supported?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.items.6.answer">
+              We currently support property transactions in the United States, Canada, United Kingdom, France, Spain, Italy, Germany, Switzerland, Japan, Singapore, Australia, New Zealand, Bhutan, and the UAE. We're adding new countries monthly - check our roadmap for upcoming regions.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq.items.7.question">Can I sell my property later for fiat currency?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.items.7.answer">
+              Yes! While we encourage Nexa transactions, you can sell your property for traditional currency. Our platform supports both Nexa and fiat conversions. When selling, you can choose to receive payment in Nexa, USD, EUR, or other major currencies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon"><i class="fas fa-home"></i></span>
+          <span data-i18n="footer.brand.name">Nexa House</span>
+        </div>
+        <p data-i18n="footer.brand.description">
+          Revolutionizing property ownership with blockchain technology. Buy, sell, and rent properties worldwide with cryptocurrency.
+        </p>
+        <div class="social-links">
+          <a href="https://twitter.com/nexa" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://t.me/nexa" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+          <a href="https://discord.gg/nexa" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          <a href="https://github.com/nexa" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-i18n="footer.explore.title">Explore</h4>
+        <ul>
+          <li><a href="#properties" data-i18n="footer.explore.links.0.text">Properties</a></li>
+          <li><a href="#about" data-i18n="footer.explore.links.1.text">About Us</a></li>
+          <li><a href="#why-nexa" data-i18n="footer.explore.links.2.text">Why Nexa</a></li>
+          <li><a href="#roadmap" data-i18n="footer.explore.links.3.text">Roadmap</a></li>
+          <li><a href="#faq" data-i18n="footer.explore.links.4.text">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-i18n="footer.resources.title">Resources</h4>
+        <ul>
+          <li><a href="#" data-i18n="footer.resources.links.0.text">How It Works</a></li>
+          <li><a href="#" data-i18n="footer.resources.links.1.text">Documentation</a></li>
+          <li><a href="#" data-i18n="footer.resources.links.2.text">Legal & Compliance</a></li>
+          <li><a href="#" data-i18n="footer.resources.links.3.text">Property Guides</a></li>
+          <li><a href="#" data-i18n="footer.resources.links.4.text">Support Center</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-i18n="footer.ecosystem.title">Nexa Ecosystem</h4>
+        <ul>
+          <li><a href="https://nexa.cafe" target="_blank" data-i18n="footer.ecosystem.links.0.text">Nexa Cafe</a></li>
+          <li><a href="https://nexa.land" target="_blank" data-i18n="footer.ecosystem.links.1.text">Nexa Land</a></li>
+          <li><a href="#" data-i18n="footer.ecosystem.links.2.text">Nexa Pay</a></li>
+          <li><a href="#" data-i18n="footer.ecosystem.links.3.text">Nexa Wallet</a></li>
+          <li><a href="#" data-i18n="footer.ecosystem.links.4.text">Nexa Explorer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p data-i18n="footer.legal.copyright">© 2025 Nexa House. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#" data-i18n="footer.legal.links.0.text">Privacy Policy</a>
+        <a href="#" data-i18n="footer.legal.links.1.text">Terms of Service</a>
+        <a href="#" data-i18n="footer.legal.links.2.text">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/content.config.js"></script>
+  <script src="/js/content.hi.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
