@@ -18,30 +18,38 @@ class PriceConverter {
     try {
       // Try multiple sources for NEXA price
       const sources = [
-        'https://api.coingecko.com/api/v3/simple/price?ids=nexa&vs_currencies=usd',
-        'https://api.coinpaprika.com/v1/tickers/nex-nexa',
+        "https://api.coingecko.com/api/v3/simple/price?ids=nexa&vs_currencies=usd",
+        "https://api.coinpaprika.com/v1/tickers/nex-nexa",
       ];
 
       for (const url of sources) {
         try {
           const response = await fetch(url);
           if (!response.ok) continue;
-          
+
           const data = await response.json();
-          
+
           // Parse CoinGecko response
           if (data.nexa?.usd) {
             this.nexaPerUSD = 1 / data.nexa.usd;
             this.lastUpdate = Date.now();
-            console.log(`NEXA Price: $${data.nexa.usd} USD (${this.nexaPerUSD.toFixed(0)} NEX per USD)`);
+            console.log(
+              `NEXA Price: $${data.nexa.usd} USD (${this.nexaPerUSD.toFixed(
+                0
+              )} NEX per USD)`
+            );
             return true;
           }
-          
+
           // Parse CoinPaprika response
           if (data.quotes?.USD?.price) {
             this.nexaPerUSD = 1 / data.quotes.USD.price;
             this.lastUpdate = Date.now();
-            console.log(`NEXA Price: $${data.quotes.USD.price} USD (${this.nexaPerUSD.toFixed(0)} NEX per USD)`);
+            console.log(
+              `NEXA Price: $${
+                data.quotes.USD.price
+              } USD (${this.nexaPerUSD.toFixed(0)} NEX per USD)`
+            );
             return true;
           }
         } catch (err) {
@@ -49,10 +57,10 @@ class PriceConverter {
           continue;
         }
       }
-      
-      throw new Error('All price sources failed');
+
+      throw new Error("All price sources failed");
     } catch (error) {
-      console.warn('Using fallback NEXA price: 1B NEX = $650');
+      console.warn("Using fallback NEXA price: 1B NEX = $650");
       this.nexaPerUSD = this.fallbackRate;
       this.lastUpdate = Date.now();
       return false;
@@ -75,15 +83,15 @@ class PriceConverter {
   }
 
   updatePropertyPrices(properties) {
-    return properties.map(property => {
+    return properties.map((property) => {
       // Extract USD amount from price string
       let usdAmount;
-      
-      if (property.priceUSD.includes('/night')) {
+
+      if (property.priceUSD.includes("/night")) {
         // For rental properties
         const match = property.priceUSD.match(/\$([\d,]+)/);
         if (match) {
-          usdAmount = parseFloat(match[1].replace(/,/g, ''));
+          usdAmount = parseFloat(match[1].replace(/,/g, ""));
           const nexaAmount = this.convertUSDToNexa(usdAmount);
           return {
             ...property,
@@ -94,7 +102,7 @@ class PriceConverter {
         // For sale properties
         const match = property.priceUSD.match(/\$([\d,]+)/);
         if (match) {
-          usdAmount = parseFloat(match[1].replace(/,/g, ''));
+          usdAmount = parseFloat(match[1].replace(/,/g, ""));
           const nexaAmount = this.convertUSDToNexa(usdAmount);
           return {
             ...property,
@@ -102,7 +110,7 @@ class PriceConverter {
           };
         }
       }
-      
+
       return property;
     });
   }
@@ -597,11 +605,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   await priceConverter.fetchNexaPrice();
 
   // Update property prices in both languages based on current NEXA rate
-  content_en.properties.items = priceConverter.updatePropertyPrices(content_en.properties.items);
-  content_hi.properties.items = priceConverter.updatePropertyPrices(content_hi.properties.items);
+  content_en.properties.items = priceConverter.updatePropertyPrices(
+    content_en.properties.items
+  );
+  content_hi.properties.items = priceConverter.updatePropertyPrices(
+    content_hi.properties.items
+  );
 
   // Refresh i18n content to get updated prices
-  i18n.content = i18n.currentLang === 'en' ? content_en : content_hi;
+  i18n.content = i18n.currentLang === "en" ? content_en : content_hi;
 
   // Initialize Property Renderer
   const propertyRenderer = new PropertyRenderer("properties-grid", i18n);
