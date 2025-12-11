@@ -2,6 +2,8 @@
 
 A revolutionary cryptocurrency-powered real estate platform built on the Nexa blockchain. Buy, sell, and rent properties worldwide with instant payments, zero intermediaries, and complete transparency.
 
+> **⚠️ IMPORTANT NOTE:** The property listings currently shown on the site are example/demonstration data created while we build this platform. These are not real properties available for purchase or rent at this time. Real property listings will be added as the platform launches.
+
 ## 🌟 Features
 
 - **🏠 Property Listings** - Browse properties from US, Europe, Bhutan, and more
